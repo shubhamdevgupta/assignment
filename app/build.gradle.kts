@@ -73,24 +73,42 @@ dependencies {
     androidTestImplementation(libs.room.testing)
 
     //datastore replaced shared prefrence
-    implementation ("androidx.datastore:datastore-preferences:1.1.4")
+    implementation("androidx.datastore:datastore-preferences:1.1.4")
 
     //bottom navigation
-    implementation ("androidx.navigation:navigation-compose:2.8.9")
+    implementation("androidx.navigation:navigation-compose:2.8.9")
 
-// Material 3 (if you're using Material3 Bottom Nav)
-    implementation ("androidx.compose.material3:material3:1.2.1")
+    // Material 3 (if you're using Material3 Bottom Nav)
+    implementation("androidx.compose.material3:material3:1.2.1")
 
     // CameraX
-    implementation ("androidx.camera:camera-core:1.4.2")
-    implementation ("androidx.camera:camera-camera2:1.4.2")
-    implementation ("androidx.camera:camera-lifecycle:1.4.2")
-    implementation ("androidx.camera:camera-view:1.4.2")
-    implementation ("androidx.camera:camera-extensions:1.4.2")
+    implementation("androidx.camera:camera-core:1.4.2")
+    implementation("androidx.camera:camera-camera2:1.4.2")
+    implementation("androidx.camera:camera-lifecycle:1.4.2")
+    implementation("androidx.camera:camera-view:1.4.2")
+    implementation("androidx.camera:camera-extensions:1.4.2")
 
-// MediaPipe Face Detection
+    // Lifecycle Compose (for collectAsStateWithLifecycle)
+    implementation ("androidx.lifecycle:lifecycle-runtime-compose:2.7.0")
 
-// Compose
-    implementation ("androidx.compose.ui:ui:1.7.8")
+    // Compose
+    implementation("androidx.compose.ui:ui:1.7.8")
+
+    // Retrofit
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+
+    // OkHttp Logging (for debug)
+    implementation("com.squareup.okhttp3:logging-interceptor:4.9.1")
+
+    // Hilt (for dependency injection, optional but recommended)
+    implementation("com.google.dagger:hilt-android:2.50")
+    kapt("com.google.dagger:hilt-android-compiler:2.50")
+
+    // ViewModel + LiveData
+    implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0")
+    implementation ("androidx.lifecycle:lifecycle-livedata-ktx:2.7.0")
+
+    implementation ("androidx.hilt:hilt-navigation-compose:1.1.0")
 
 }

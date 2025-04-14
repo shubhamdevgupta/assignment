@@ -1,4 +1,4 @@
-package com.androiddev.assignment.data.model
+package com.androiddev.assignment.model
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

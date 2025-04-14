@@ -7,8 +7,8 @@ import androidx.lifecycle.viewModelScope
 import androidx.room.Room
 import com.androiddev.assignment.data.datastore.DataStoreManager
 import com.androiddev.assignment.data.local.AppDatabase
-import com.androiddev.assignment.data.model.User
-import com.androiddev.assignment.data.repository.UserRepository
+import com.androiddev.assignment.model.User
+import com.androiddev.assignment.repository.UserRepository
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch

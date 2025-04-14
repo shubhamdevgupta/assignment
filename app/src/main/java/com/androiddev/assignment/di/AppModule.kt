@@ -3,8 +3,8 @@ package com.androiddev.assignment.di
 import android.app.Application
 import androidx.room.Room
 import com.androiddev.assignment.data.api.MangaApiService
-import com.androiddev.assignment.data.db.MangaDao
-import com.androiddev.assignment.data.db.MangaDatabase
+import com.androiddev.assignment.data.local.db.MangaDao
+import com.androiddev.assignment.data.local.db.MangaDatabase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

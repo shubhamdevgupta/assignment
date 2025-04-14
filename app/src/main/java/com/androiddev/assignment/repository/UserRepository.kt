@@ -1,7 +1,7 @@
-package com.androiddev.assignment.data.repository
+package com.androiddev.assignment.repository
 
 import com.androiddev.assignment.data.local.UserDao
-import com.androiddev.assignment.data.model.User
+import com.androiddev.assignment.model.User
 
 class UserRepository(private val userDao: UserDao) {
 

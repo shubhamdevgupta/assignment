@@ -1,8 +1,8 @@
-package com.androiddev.assignment.data.repository
+package com.androiddev.assignment.repository
 
 import com.androiddev.assignment.data.api.MangaApiService
-import com.androiddev.assignment.data.db.MangaDao
-import com.androiddev.assignment.data.model.Manga
+import com.androiddev.assignment.data.local.db.MangaDao
+import com.androiddev.assignment.model.Manga
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 import javax.inject.Inject

@@ -1,4 +1,4 @@
-package com.androiddev.assignment.data.db
+package com.androiddev.assignment.data.local.db
 
 import androidx.room.*
 import kotlinx.coroutines.flow.Flow

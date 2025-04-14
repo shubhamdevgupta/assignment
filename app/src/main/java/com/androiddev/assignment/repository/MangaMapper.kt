@@ -1,9 +1,9 @@
-package com.androiddev.assignment.data.repository
+package com.androiddev.assignment.repository
 
 
 import com.androiddev.assignment.data.api.MangaDto
-import com.androiddev.assignment.data.db.MangaEntity
-import com.androiddev.assignment.data.model.Manga
+import com.androiddev.assignment.data.local.db.MangaEntity
+import com.androiddev.assignment.model.Manga
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 

@@ -1,6 +1,6 @@
 package com.androiddev.assignment.data.local
 
-import com.androiddev.assignment.data.model.User
+import com.androiddev.assignment.model.User
 
 import androidx.room.Dao
 import androidx.room.Insert

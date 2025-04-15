@@ -1,7 +1,6 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
-    alias(libs.plugins.kotlin.compose)
     id("org.jetbrains.kotlin.kapt") // <-- Just use id without alias
 }
 
@@ -19,6 +18,12 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    buildFeatures {
+        compose = true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.5.10" // use a version that matches your composeBom
+    }
     buildTypes {
         release {
             isMinifyEnabled = false
@@ -72,6 +77,8 @@ dependencies {
     testImplementation(libs.room.testing)
     androidTestImplementation(libs.room.testing)
 
+    implementation(libs.androidx.room.paging)
+
     //datastore replaced shared prefrence
     implementation ("androidx.datastore:datastore-preferences:1.1.4")
 
@@ -92,5 +99,25 @@ dependencies {
 
 // Compose
     implementation ("androidx.compose.ui:ui:1.7.8")
+
+    // Retrofit + Gson
+    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
+
+// Room
+    implementation ("androidx.room:room-runtime:2.6.1")
+    kapt ("androidx.room:room-compiler:2.6.1")
+    implementation ("androidx.room:room-ktx:2.6.1")
+
+// Coroutines)
+    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
+    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
+
+// Lifecycle ViewModel + LiveData
+    implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2")
+    implementation ("androidx.lifecycle:lifecycle-livedata-ktx:2.6.2")
+
+// Paging (for smooth scroll/pagination)
+    implementation ("androidx.paging:paging-runtime:3.2.1")
 
 }
